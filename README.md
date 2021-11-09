@@ -1,16 +1,21 @@
 # Task Tracker App using React 
 
+Simple task tracker app to utilize functionalities of React framework (function-based components, states, props, fetch API). 
+
+Based on guide by Brad Traversy's React JS Crash Course. 
 
 ## Live view:
 
 https://react-app-karl.herokuapp.com/
 
-Mock server: 
+Mock backend server in db.json: 
 
-`npm run server`
+Initiate: `npm run server`
+
+http://localhost:5000/tasks
 
 
-# Getting Started with Create React App
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
