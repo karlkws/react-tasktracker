@@ -6,9 +6,12 @@ Based on guide by Brad Traversy's React JS Crash Course.
 
 ## Live view:
 
+Deployed to Heroku: 
+
+
 https://react-app-karl.herokuapp.com/
 
-Mock backend server in db.json: 
+Local mock backend server (db.json file): 
 
 Initiate: `npm run server`
 
