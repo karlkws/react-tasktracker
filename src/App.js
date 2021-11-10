@@ -10,7 +10,7 @@ import Footer from "./components/Footer";
 import About from "./components/About";
 import Home from "./components/Home";
 
-const port = 5001
+// const port = 5001
 
 /* Function based component */
 // Arrow function
@@ -35,14 +35,14 @@ const App = () => {
 
   // Fetch all Tasks
   const fetchTasks = async () => {
-    const res = await fetch(`http://localhost:${port}/tasks`);
+    const res = await fetch(`http://localhost:5000/tasks`);
     const data = await res.json();
     return data;
   };
 
   // Fetch one Task for updating Reminder to server
   const fetchTask = async (id) => {
-    const res = await fetch(`http://localhost:${port}/tasks/${id}`);
+    const res = await fetch(`http://localhost:5000/tasks/${id}`);
     const data = await res.json();
     return data;
   };
@@ -51,7 +51,7 @@ const App = () => {
   const deleteTask = async (id) => {
     // console.log('Delete', id)
 
-    await fetch(`http://localhost:${port}/tasks/${id}`, {
+    await fetch(`http://localhost:5000/tasks/${id}`, {
       method: "DELETE",
     });
 
@@ -64,7 +64,7 @@ const App = () => {
     const taskToToggle = await fetchTask(id);
     const updatedTask = { ...taskToToggle, reminder: !taskToToggle.reminder } // update task 'reminder' property to reverse boolean using ... operator
 
-    const res = await fetch(`http://localhost:${port}/tasks/${id}`, {
+    const res = await fetch(`http://localhost:5000/tasks/${id}`, {
       method: "PUT", 
       headers: {
         "Content-type": "application/json",
@@ -83,7 +83,7 @@ const App = () => {
 
   // Add Task function
   const addTask = async (task) => {
-    const res = await fetch(`http://localhost:${port}/tasks`, {
+    const res = await fetch(`http://localhost:5000/tasks`, {
       method: "POST",
       headers: {
         "Content-type": "application/json",
